@@ -68,19 +68,19 @@ class Interpreter(object):
 def main():
     while True:
         try:
-            text=raw_input('calc>')
+            text=input('calc>')
         except EOFError:
             break
         
         if not text: #text为空继续输入合理的文本
-            continue
+            break
         
         interpreter=Interpreter(text)
         result = interpreter.expr()
         
-        print result
+        print(result)
         
-
+    print('Exit...')
 
 if __name__=="__main__":
     main()
